@@ -1,0 +1,105 @@
+/* Agents Page Styles */
+
+.agents-page {
+  min-height: calc(100vh - 64px);
+  background: #f8fafc;
+}
+
+.agents-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.agents-stats {
+  margin-bottom: 24px;
+}
+
+.agents-filters {
+  margin-bottom: 24px;
+}
+
+.agent-card {
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.agent-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.agent-card .ant-card-meta-title {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.agent-card .ant-card-meta-description {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.agent-card .ant-card-actions {
+  background: #fafafa;
+  border-top: 1px solid #f0f0f0;
+}
+
+.agent-card .ant-card-actions > li {
+  margin: 8px 0;
+}
+
+.agent-status-active {
+  color: #52c41a;
+}
+
+.agent-status-draft {
+  color: #faad14;
+}
+
+.agent-status-archived {
+  color: #d9d9d9;
+}
+
+.public-switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.agent-actions-dropdown {
+  position: relative;
+}
+
+.empty-state {
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.empty-state .ant-empty-description {
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .agents-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .agents-filters .ant-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .agents-filters .ant-col {
+    width: 100% !important;
+  }
+
+  .agents-filters .ant-select,
+  .agents-filters .ant-input {
+    width: 100% !important;
+  }
+}

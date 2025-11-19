@@ -1,0 +1,10 @@
+${AnsiColor.BRIGHT_GREEN}
+
+██╗    ██╗  ██╗    ██╗   ██╗    ██████╗ 
+██║    ██║  ██║    ██║   ██║    ██╔══██╗
+██║    ███████║    ██║   ██║    ██████╔╝
+██║    ██╔══██║    ██║   ██║    ██╔══██╗
+██║    ██║  ██║    ╚██████╔╝    ██████╔╝
+╚═╝    ╚═╝  ╚═╝     ╚═════╝     ╚═════╝ 
+
+${AnsiColor.BRIGHT_GREEN}:: IHUB Server :: Running Spring Boot ${spring-boot.version} ::${AnsiColor.DEFAULT}

@@ -1,0 +1,94 @@
+.cs-main-container {
+  border: none !important;
+}
+.scrollbar-container {
+  padding-bottom: 1rem !important;
+}
+.cs-message--outgoing .cs-message__content {
+  background: #f6f8fa !important;
+  margin: 1.5rem 0 2rem 0 !important;
+}
+.cs-message--incoming .cs-message__content {
+  background: #f6f8fa !important;
+  border-radius: 0.75rem !important;
+}
+.cs-chat-container .cs-message-input {
+  border: none !important;
+}
+.cs-message-input__content-editor-wrapper {
+  background: transparent !important;
+  padding-right: 0 !important;
+}
+.cs-message-input__content-editor {
+  background: transparent !important;
+  padding: 0.75rem;
+  padding-left: 48px !important;
+}
+.cs-message-input__content-editor-container {
+  background: #ffffff !important;
+  border-radius: 0.75rem;
+  border: 1.5px solid #e0e0e0;
+  padding: 0.75rem;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.cs-message-input__content-editor-container:hover {
+  border-color: #c0c0c0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+.cs-message-input__content-editor-container:focus-within {
+  border-color: var(--color-accent-emphasis);
+}
+.cs-message-input__tools {
+  padding: 0 0.25rem !important;
+}
+.cs-message-input__tools .cs-button--send {
+  align-self: center !important;
+  transition: all 0.2s ease;
+  color: var(--color-accent-emphasis) !important;
+}
+.cs-message-input__tools .cs-button--send:hover {
+  transform: scale(1.05);
+}
+/* 优化占位符样式 */
+.cs-message-input__content-editor[data-placeholder]::before {
+  color: #9ca3af !important;
+  font-size: 14px;
+  opacity: 0.8;
+}
+/* 输入框文本样式 */
+.cs-message-input__content-editor {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-fg-default);
+}
+/* 禁用状态样式 */
+.cs-message-input__content-editor-container:has(
+  .cs-message-input__content-editor[contenteditable='false']
+) {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #f6f8fa !important;
+}
+
+.cs-message--incoming .cs-message__content-wrapper {
+  width: 100% !important;
+}
+
+.cs-message--incoming {
+  max-width: 100% !important;
+}
+.cs-message--incoming .cs-message__content ul,
+.cs-message--incoming .cs-message__content ol {
+  margin: 0 0 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+#ihub-context-tag {
+  color: #1549e5;
+  background-color: #f1f6fc;
+  border-radius: 4px;
+  margin-right: 4px;
+  padding: 1px 5px;
+  display: inline-block;
+}

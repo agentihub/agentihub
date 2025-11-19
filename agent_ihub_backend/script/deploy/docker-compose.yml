@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+  ihub-server:
+    image: azul/zulu-openjdk:17-latest
+    container_name: ihub-server
+    working_dir: /home/ihub
+    volumes:
+      - ./:/home/ihub
+    env_file:
+      - .env
+    command: ["java", "-jar", "/home/ihub/ihub-server.jar","--spring.profiles.active=dev"]
+    ports:
+      - "9081:9081"
+    environment:
+      - TZ=Asia/Shanghai

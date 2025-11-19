@@ -1,0 +1,30 @@
+#!/usr/bin/env sh
+
+# 获取提交信息
+commit_message=$(cat "$1")
+
+# 定义正则（这里只能用 grep 校验）
+commit_regex="^(feat|fix|docs|style|refactor|test|chore|ci|build|perf|revert)(\\(.+\\))?: .{1,72}"
+
+echo "🔍 Checking commit message format..."
+
+# 使用 grep 而不是 [[ =~ ]]
+echo "$commit_message" | grep -Eq "$commit_regex"
+if [ $? -ne 0 ]; then
+    echo "❌ Invalid commit message format!"
+    echo ""
+    echo "Commit message should follow the conventional commits format:"
+    echo "  <type>[optional scope]: <description>"
+    echo ""
+    echo "Types: feat, fix, docs, style, refactor, test, chore, ci, build, perf, revert"
+    echo ""
+    echo "Examples:"
+    echo "  feat: add user authentication"
+    echo "  fix(api): resolve CORS issue"
+    echo "  docs: update README"
+    echo ""
+    echo "Your commit message: $commit_message"
+    exit 1
+fi
+
+echo "✅ Commit message format is valid!"

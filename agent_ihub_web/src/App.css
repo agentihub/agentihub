@@ -1,0 +1,64 @@
+/* Import responsive utilities */
+@import './styles/responsive.css';
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden !important;
+  width: 100% !important;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8fafc;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Ant Design overrides */
+.ant-layout {
+  background: transparent !important;
+}
+
+.ant-card {
+  border-radius: 12px !important;
+}
+
+.template-variable {
+  cursor: default;
+  transition: all 0.2s ease;
+}
+.template-variable:hover {
+  background-color: #b6e3ff !important;
+  box-shadow: 0 1px 3px rgba(9, 105, 218, 0.2);
+}

@@ -1,0 +1,88 @@
+server:
+  port: 9081
+spring:
+  config:
+    import: optional:file:.env[.properties]
+  application:
+    name: agent-ihub-server
+  profiles:
+    active: dev
+  mail:
+    host: ${SPRING_MAIL_HOST}
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+    port: 465
+    default-encoding: utf-8
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+logging:
+  file:
+    path: ./logs
+    name: ${spring.application.name}.log
+  level:
+    com.litevar.ihub: debug
+    root: info
+mongo-plus:
+  configuration:
+    field:
+      camel-to-underline: true
+      ignoring-null: false
+    auto-create-index: true
+    logic:
+      open: true
+      auto-fill: true
+      logic-delete-field: logic_del
+      logic-delete-value: true
+      logic-not-delete-value: false
+      logic-data-type: boolean
+    banner: false
+    auto-convert-object-id: false
+  log: true
+  pretty: true
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+  group-configs:
+    - group: 'agent-ihub'
+      paths-to-match: '/**'
+      packages-to-scan: com.litevar.ihub
+knife4j:
+  enable: true
+  setting:
+    language: zh-CN
+
+sa-token:
+  token-name: Authorization
+  token-prefix: Bearer
+  is-concurrent: true
+  is-share: false
+  token-style: uuid
+  is-log: false
+  jwt-secret-key: ${SA_TOKEN_JWT_SECRET_KEY}
+  timeout: 86400
+
+# 阿里云短信服务配置
+aliyun:
+  sms:
+    access-key-id: ENC(${ALIYUN_SMS_ACCESS_KEY_ID})
+    access-key-secret: ENC(${ALIYUN_SMS_ACCESS_KEY_SECRET})
+    sign-name: ${ALIYUN_SMS_SIGN_NAME}
+    template-code: ${ALIYUN_SMS_TEMPLATE_CODE}
+# 加密配置
+jasypt:
+  encryptor:
+    algorithm: PBEWithMD5AndDES
+    iv-generator-classname: org.jasypt.iv.NoIvGenerator
+    password: ${JASYPT_PASSWORD}

@@ -1,0 +1,164 @@
+@import 'tailwindcss' important;
+
+:root {
+  /* GitHub-like color scheme */
+  --color-canvas-default: #ffffff;
+  --color-canvas-subtle: #f6f8fa;
+  --color-border-default: #d1d9e0;
+  --color-border-muted: #d8dee4;
+  --color-fg-default: #1f2328;
+  --color-fg-muted: #656d76;
+  --color-fg-subtle: #6e7781;
+  --color-accent-fg: #0969da;
+  --color-accent-emphasis: #0969da;
+  --color-success-fg: #1a7f37;
+  --color-danger-fg: #d1242f;
+  --color-btn-primary-bg: #2da44e;
+  --color-btn-primary-hover-bg: #2c974b;
+  --color-btn-bg: #f6f8fa;
+  --color-btn-border: #d1d9e0;
+  --color-btn-hover-bg: #f3f4f6;
+  --color-btn-hover-border: #d1d9e0;
+  --color-header-bg: #24292f;
+  --color-header-divider: #57606a;
+  --color-header-text: #f0f6fc;
+  --color-header-logo: #f0f6fc;
+  --color-header-search-bg: #32383f;
+  --color-header-search-border: #424a53;
+
+  /* Typography */
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica,
+    Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--color-fg-default);
+  background-color: var(--color-canvas-default);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--color-accent-fg);
+  text-decoration: none;
+  font-weight: 500;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--color-canvas-default);
+  color: var(--color-fg-default);
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.25;
+  font-weight: 600;
+  color: var(--color-fg-default);
+  margin: 0 0 16px 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-weight: 600;
+  color: var(--color-fg-default);
+  margin: 0 0 16px 0;
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-weight: 600;
+  color: var(--color-fg-default);
+  margin: 0 0 16px 0;
+}
+
+p {
+  margin: 0 0 16px 0;
+  color: var(--color-fg-default);
+}
+
+button {
+  border-radius: 6px;
+  border: 1px solid var(--color-btn-border);
+  padding: 5px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--color-btn-bg);
+  color: var(--color-fg-default);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+}
+
+button:hover {
+  background-color: var(--color-btn-hover-bg);
+  border-color: var(--color-btn-hover-border);
+}
+
+button:focus,
+button:focus-visible {
+  box-shadow: none;
+}
+
+button:active {
+  background-color: var(--color-btn-hover-bg);
+  border-color: var(--color-btn-hover-border);
+  transform: none;
+}
+
+button[type='submit'],
+button.btn-primary {
+  background-color: var(--color-btn-primary-bg);
+  border-color: var(--color-btn-primary-bg);
+  color: #ffffff;
+}
+
+button[type='submit']:hover,
+button.btn-primary:hover {
+  background-color: var(--color-btn-primary-hover-bg) !important;
+  border-color: var(--color-btn-primary-hover-bg) !important;
+}
+
+/* GitHub-like input styles */
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='search'],
+textarea {
+  background-color: var(--color-canvas-default);
+  border: 1px solid var(--color-border-default);
+  border-radius: 6px;
+  color: var(--color-fg-default);
+  font-size: 14px;
+  padding: 5px 12px;
+  line-height: 20px;
+  vertical-align: middle;
+  transition: border-color 0.2s ease;
+}
+
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='password']:focus,
+input[type='search']:focus,
+textarea:focus {
+  border-color: var(--color-accent-emphasis);
+  box-shadow: none;
+}

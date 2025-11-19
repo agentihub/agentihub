@@ -1,0 +1,147 @@
+.notifications-page {
+  padding: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.notifications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.header-left {
+  flex: 1;
+}
+
+.header-left .ant-typography {
+  margin-bottom: 8px;
+}
+
+.header-actions {
+  margin-left: 16px;
+}
+
+.notifications-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  gap: 16px;
+}
+
+.notifications-card {
+  margin-bottom: 24px;
+}
+
+.notifications-content {
+  margin-top: 16px;
+}
+
+.notification-item {
+  padding: 16px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.notification-item:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.notification-item.unread {
+  background-color: rgba(24, 144, 255, 0.04);
+  border-left: 4px solid #1890ff;
+}
+
+.notification-avatar {
+  position: relative;
+}
+
+.unread-dot {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  background-color: #ff4d4f;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.notification-title {
+  margin-bottom: 4px;
+}
+
+.notification-description {
+  margin-bottom: 0;
+}
+
+.notification-description .ant-typography {
+  margin-bottom: 4px;
+}
+
+.notification-time {
+  font-size: 12px;
+}
+
+.ant-tabs-content-holder {
+  padding-top: 0;
+}
+
+.ant-list-item-action {
+  margin-left: 0;
+}
+
+/* Badge styles */
+.ant-badge-count {
+  background-color: #ff4d4f;
+  color: #fff;
+  box-shadow: 0 0 0 1px #fff;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .notifications-page {
+    padding: 16px;
+  }
+
+  .notifications-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .header-actions {
+    margin-left: 0;
+  }
+
+  .notification-item {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .notifications-page {
+    padding: 12px;
+  }
+
+  .notifications-header {
+    margin-bottom: 16px;
+  }
+
+  .header-actions .ant-space {
+    flex-wrap: wrap;
+  }
+
+  .notification-item {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}

@@ -1,0 +1,77 @@
+spring:
+  redis:
+    redisson:
+      config: |
+        singleServerConfig:
+            idleConnectionTimeout: 10000
+            connectTimeout: 10000
+            timeout: 3000
+            retryAttempts: 3
+            retryInterval: 1500
+            password: ${REDIS_PASSWORD}
+            subscriptionsPerConnection: 5
+            address: ${REDIS_ADDRESS}
+            subscriptionConnectionMinimumIdleSize: 1
+            subscriptionConnectionPoolSize: 50
+            connectionMinimumIdleSize: 32
+            connectionPoolSize: 64
+            database: 6
+            dnsMonitoringInterval: 5000
+        threads: 16
+        nettyThreads: 32
+        codec: !<org.redisson.codec.JsonJacksonCodec> {}
+        transportMode: "NIO"
+  ai:
+    openai:
+      # API密钥配置
+      api-key: ${OPENAI_API_KEY}
+      # 大模型API地址
+      base-url: ${OPENAI_API_BASE_URL}
+      embedding:
+        options:
+          model: ${OPENAI_API_EMBEDDING_MODEL}
+#        embeddings-path: /v1
+    vectorstore:
+      milvus:
+        client:
+          host: ${MILVUS_HOST}
+          port: 19530
+          username: ${MILVUS_USERNAME}
+          password: ${MILVUS_PASSWORD}
+        collection-name: agent_abstracts
+        # 向量维度，必须和 Embedding 模型输出的维度一致
+        embedding-dimension: 1024
+        index-type: "IVF_FLAT"
+        metric-type: "COSINE"
+        initialize-schema: true
+        database-name: ihub
+mongo-plus:
+  data:
+    mongodb:
+      host: ${MONGODB_HOST}
+      port: ${MONGODB_PORT}
+      database: lite-ihub
+      username: ${MONGODB_USERNAME}
+      password: ${MONGODB_PASSWORD}
+      authentication-database: admin
+      connect-timeout-m-s: 50000
+
+dolphin:
+  base-url: ${DOLPHIN_BASE_URL}
+  token: ${DOLPHIN_TOKEN}
+  poll-interval: 3s
+  poll-timeout: 5m
+  download-timeout: 2m
+  request-timeout: 60s
+
+agent-ihub:
+  # agent配置
+  lite-agent:
+    base-url: ${LITE_AGENT_BASE_URL}
+    navigation-agent-api-key: ${NAVIGATION_AGENT_API_KEY}
+    keywords-agent-api-key: ${KEYWORDS_AGENT_API_KEY}
+    creation-agent-api-key: ${CREATION_AGENT_API_KEY}
+    abstracts-agent-api-key: ${ABSTRACTS_AGENT_API_KEY}
+  # 文件上传配置 相对当前项目路径
+  upload-file:
+    path: upload-file

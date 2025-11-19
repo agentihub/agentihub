@@ -1,0 +1,249 @@
+/* GitHub 主题样式增强 */
+
+/* Code block 样式覆盖 */
+.markdown-body pre {
+  background-color: #f6f8fa;
+  border: 1px solid #d1d9e0;
+  border-radius: 6px;
+  padding: 16px;
+  overflow: auto;
+  font-size: 13px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+}
+
+.markdown-body pre code {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body blockquote {
+  white-space: pre-wrap;
+}
+
+.markdown-body ul {
+  list-style-type: disc;
+}
+
+.markdown-body ol {
+  list-style-type: decimal;
+}
+
+.markdown-body code {
+  background-color: rgba(175, 184, 193, 0.2);
+  border-radius: 3px;
+  font-size: 85%;
+  margin: 0;
+  padding: 0.2em 0.4em;
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    SF Mono,
+    Menlo,
+    Consolas,
+    Liberation Mono,
+    monospace;
+}
+
+/* Markdown 表格样式 */
+.markdown-body table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  border: 1px solid #d1d9e0;
+  padding: 6px 13px;
+}
+
+.markdown-body table th {
+  background-color: #f6f8fa;
+  font-weight: 600;
+}
+
+/* 响应式断点 */
+@media (max-width: 768px) {
+  /* 移动端调整主内容区间距 */
+  main {
+    padding: 8px !important;
+  }
+
+  /* 移动端调整文件列表 */
+  .file-list-item .file-description {
+    display: none;
+  }
+}
+
+/* 按钮组样式优化 */
+.button-group {
+  display: inline-flex;
+  align-items: stretch;
+}
+
+.button-group button:not(:first-child) {
+  border-left: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.button-group button:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Syntax highlighting 覆盖 (使用 highlight.js github theme) */
+.hljs {
+  background: #f6f8fa;
+  color: #24292e;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #6a737d;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst {
+  color: #d73a49;
+  font-weight: bold;
+}
+
+.hljs-number,
+.hljs-literal,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag .hljs-attr {
+  color: #005cc5;
+}
+
+.hljs-string,
+.hljs-doctag {
+  color: #032f62;
+}
+
+.hljs-title,
+.hljs-section,
+.hljs-selector-id {
+  color: #6f42c1;
+  font-weight: bold;
+}
+
+.hljs-subst {
+  font-weight: normal;
+}
+
+.hljs-type,
+.hljs-class .hljs-title {
+  color: #6f42c1;
+  font-weight: bold;
+}
+
+.hljs-tag,
+.hljs-name,
+.hljs-attribute {
+  color: #22863a;
+  font-weight: normal;
+}
+
+.hljs-regexp,
+.hljs-link {
+  color: #032f62;
+}
+
+.hljs-symbol,
+.hljs-bullet {
+  color: #e36209;
+}
+
+.hljs-built_in,
+.hljs-builtin-name {
+  color: #005cc5;
+}
+
+.hljs-meta {
+  color: #6a737d;
+}
+
+.hljs-deletion {
+  background: #ffeef0;
+}
+
+.hljs-addition {
+  background: #e6ffed;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+/* Dark mode support (可选) */
+@media (prefers-color-scheme: dark) {
+  .markdown-body pre {
+    background-color: #161b22;
+    border-color: #30363d;
+  }
+
+  .markdown-body code {
+    background-color: rgba(110, 118, 129, 0.4);
+  }
+
+  .markdown-body table th,
+  .markdown-body table td {
+    border-color: #30363d;
+  }
+
+  .markdown-body table th {
+    background-color: #161b22;
+  }
+
+  .hljs {
+    background: #161b22;
+    color: #c9d1d9;
+  }
+
+  .hljs-comment,
+  .hljs-quote {
+    color: #8b949e;
+  }
+
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-subst {
+    color: #ff7b72;
+  }
+
+  .hljs-number,
+  .hljs-literal,
+  .hljs-variable,
+  .hljs-template-variable,
+  .hljs-tag .hljs-attr {
+    color: #79c0ff;
+  }
+
+  .hljs-string,
+  .hljs-doctag {
+    color: #a5d6ff;
+  }
+
+  .hljs-title,
+  .hljs-section,
+  .hljs-selector-id {
+    color: #d2a8ff;
+  }
+
+  .hljs-tag,
+  .hljs-name,
+  .hljs-attribute {
+    color: #7ee787;
+  }
+}

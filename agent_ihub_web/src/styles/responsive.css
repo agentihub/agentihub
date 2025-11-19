@@ -1,0 +1,259 @@
+/* Global Responsive Utilities for Agent iHub */
+
+/* Touch-friendly minimum sizes */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.touch-target-large {
+  min-height: 48px;
+  min-width: 48px;
+}
+
+/* Responsive text utilities */
+.text-responsive {
+  font-size: clamp(14px, 2.5vw, 18px);
+}
+
+.text-responsive-heading {
+  font-size: clamp(20px, 4vw, 32px);
+}
+
+.text-responsive-title {
+  font-size: clamp(16px, 3vw, 24px);
+}
+
+/* Responsive spacing utilities */
+.spacing-responsive {
+  padding: clamp(12px, 3vw, 24px);
+}
+
+.spacing-responsive-x {
+  padding-left: clamp(12px, 3vw, 24px);
+  padding-right: clamp(12px, 3vw, 24px);
+}
+
+.spacing-responsive-y {
+  padding-top: clamp(12px, 3vw, 24px);
+  padding-bottom: clamp(12px, 3vw, 24px);
+}
+
+/* Container responsive utilities */
+.container-responsive {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(12px, 3vw, 24px);
+}
+
+/* Grid responsive utilities */
+.grid-responsive {
+  display: grid;
+  gap: clamp(12px, 2vw, 24px);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.grid-responsive-2 {
+  display: grid;
+  gap: clamp(12px, 2vw, 24px);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.grid-responsive-3 {
+  display: grid;
+  gap: clamp(12px, 2vw, 24px);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+/* Flex responsive utilities */
+.flex-responsive {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(8px, 2vw, 16px);
+}
+
+.flex-responsive-column {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(8px, 2vw, 16px);
+}
+
+/* Responsive show/hide utilities */
+.show-mobile {
+  display: none;
+}
+
+.show-desktop {
+  display: block;
+}
+
+.hide-mobile {
+  display: block;
+}
+
+.hide-desktop {
+  display: none;
+}
+
+/* Intermediate breakpoint utilities */
+@media (max-width: 1200px) {
+  .hide-xl {
+    display: none !important;
+  }
+
+  .show-xl {
+    display: block !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .hide-lg {
+    display: none !important;
+  }
+
+  .show-lg {
+    display: block !important;
+  }
+
+  .flex-responsive-md {
+    flex-direction: column;
+  }
+
+  .text-center-md {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hide-md {
+    display: none !important;
+  }
+
+  .show-md {
+    display: block !important;
+  }
+
+  .show-mobile {
+    display: block !important;
+  }
+
+  .hide-mobile {
+    display: none !important;
+  }
+
+  .show-desktop {
+    display: none !important;
+  }
+
+  .hide-desktop {
+    display: block !important;
+  }
+
+  .flex-responsive {
+    flex-direction: column;
+  }
+
+  .text-center-mobile {
+    text-align: center;
+  }
+
+  .full-width-mobile {
+    width: 100% !important;
+  }
+
+  .margin-mobile {
+    margin: 0 16px;
+  }
+
+  .padding-mobile {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hide-sm {
+    display: none !important;
+  }
+
+  .show-sm {
+    display: block !important;
+  }
+
+  .margin-mobile {
+    margin: 0 12px;
+  }
+
+  .padding-mobile {
+    padding: 12px;
+  }
+
+  .touch-target {
+    min-height: 48px;
+    min-width: 48px;
+  }
+
+  .touch-target-large {
+    min-height: 52px;
+    min-width: 52px;
+  }
+
+  .text-responsive {
+    font-size: 16px;
+  }
+
+  .text-responsive-heading {
+    font-size: 24px;
+  }
+
+  .text-responsive-title {
+    font-size: 18px;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .agent-card,
+  .search-bar,
+  .header {
+    border: 2px solid;
+  }
+}
+
+/* Dark mode considerations */
+@media (prefers-color-scheme: dark) {
+  /* This can be extended when dark mode is implemented */
+  .responsive-shadow {
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Print styles */
+@media print {
+  .hide-print {
+    display: none !important;
+  }
+
+  .show-print {
+    display: block !important;
+  }
+
+  .agent-card {
+    break-inside: avoid;
+    margin-bottom: 20px;
+  }
+
+  .header,
+  .mobile-nav-drawer {
+    display: none !important;
+  }
+}

@@ -1,0 +1,4 @@
+com.litevar.ihub.common.core.config.SwaggerConfigure
+com.litevar.ihub.common.core.config.HutoolConfigure
+com.litevar.ihub.common.core.config.AliyunSmsConfigure
+com.litevar.ihub.common.core.config.MarkdownConverterConfigure

@@ -1,0 +1,170 @@
+.profile-page {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.profile-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  gap: 16px;
+}
+
+.profile-not-found {
+  margin: 48px 0;
+  text-align: center;
+}
+
+.profile-header {
+  margin-bottom: 24px;
+}
+
+.profile-avatar {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.profile-info {
+  padding-left: 16px;
+}
+
+.profile-info .ant-typography {
+  margin-bottom: 8px;
+}
+
+.profile-bio {
+  margin: 16px 0;
+  color: #666;
+}
+
+.profile-meta {
+  margin: 16px 0;
+  flex-wrap: wrap;
+}
+
+.profile-actions {
+  margin-top: 16px;
+}
+
+.profile-actions .ant-btn {
+  margin-right: 8px;
+}
+
+.profile-stats {
+  margin-bottom: 24px;
+}
+
+.profile-stats .ant-card {
+  text-align: center;
+}
+
+.profile-content {
+  margin-bottom: 24px;
+}
+
+.agent-card {
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.agent-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.agent-card-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.agent-card-title .ant-typography {
+  flex: 1;
+  margin: 0;
+}
+
+.agent-card-description {
+  margin-top: 8px;
+}
+
+.agent-card-description .ant-typography {
+  margin-bottom: 8px;
+}
+
+.agent-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8px 0;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.agent-update-time {
+  font-size: 12px;
+}
+
+.agent-card-tags {
+  margin-top: 8px;
+}
+
+.agent-card-tags .ant-tag {
+  margin-bottom: 4px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .profile-page {
+    padding: 16px;
+  }
+
+  .profile-header {
+    margin-bottom: 16px;
+  }
+
+  .profile-info {
+    padding-left: 0;
+    margin-top: 16px;
+  }
+
+  .profile-stats {
+    margin-bottom: 16px;
+  }
+
+  .profile-content {
+    margin-bottom: 16px;
+  }
+
+  .agent-card-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-page {
+    padding: 12px;
+  }
+
+  .profile-avatar {
+    margin-bottom: 12px;
+  }
+
+  .profile-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-actions .ant-btn {
+    margin-bottom: 8px;
+  }
+
+  .agent-card-title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

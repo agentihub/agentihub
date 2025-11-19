@@ -1,0 +1,365 @@
+/* Developers 页面样式 */
+.developers-page {
+  min-height: calc(100vh - 64px);
+  background: #ffffff;
+}
+
+/* 内容卡片容器 */
+.developers-content-card {
+  width: 70%;
+  margin: 0 auto;
+  /* padding: 0 24px 40px; */
+  background: #ffffff;
+  border: 1px solid #d1d9e0;
+  border-radius: 6px;
+  box-shadow: none;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+/* 过滤器区域 */
+.developers-filters {
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  background-color: #f6f8fa;
+  border-bottom: 1px solid #d1d9e0;
+}
+
+.content-type-tabs {
+  display: flex;
+  gap: 0;
+}
+
+.content-type-tab {
+  padding: 8px 16px;
+  border: 1px solid #d0d7de;
+  background: #f6f8fa;
+  color: #57606a;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 0;
+}
+
+.content-type-tab:first-child {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-right: none;
+}
+
+.content-type-tab:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.content-type-tab:hover {
+  background: #f1f3f4;
+}
+
+.content-type-tab.active {
+  background: #0969da;
+  color: #ffffff;
+  border-color: #0969da;
+}
+
+.filter-dropdowns {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.filter-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-label {
+  font-size: 14px;
+  color: #57606a;
+  white-space: nowrap;
+}
+
+.filter-select {
+  padding: 6px 24px 6px 8px;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #24292f;
+  font-size: 14px;
+  cursor: pointer;
+  appearance: none;
+  min-width: 120px;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #0969da;
+  box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.1);
+}
+
+.dropdown-icon {
+  position: absolute;
+  right: 8px;
+  color: #57606a;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+/* 开发者列表 */
+
+.developer-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 20px 10px;
+  border-bottom: 1px solid #d1d9e0;
+  transition: background-color 0.2s ease;
+}
+
+.developer-card:last-child {
+  border-bottom: none;
+}
+
+/* 排名 */
+.developer-rank {
+  font-size: 14px;
+  color: #59636e;
+  min-width: 40px;
+  text-align: center;
+  margin-top: -40px;
+}
+
+/* 开发者信息 */
+.developer-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+  min-width: 0;
+}
+
+.developer-avatar {
+  flex-shrink: 0;
+}
+
+.avatar-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.developer-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.developer-name {
+  margin-bottom: 4px;
+}
+
+.name-link {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0969da;
+  text-decoration: none;
+}
+
+.name-link:hover {
+  text-decoration: underline;
+}
+
+.developer-userName {
+  font-size: 14px;
+  color: #57606a;
+}
+
+.userName-link {
+  color: #57606a;
+  text-decoration: none;
+}
+
+.userName-link:hover {
+  color: #0969da;
+  text-decoration: underline;
+}
+
+/* 热门仓库 */
+.popular-repo {
+  flex: 2;
+  min-width: 0;
+  padding: 0 16px;
+}
+
+.repo-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #da5b0b;
+  margin-bottom: 6px;
+}
+
+.flame-icon {
+  font-size: 12px;
+  color: #da5b0b;
+}
+
+.repo-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.repo-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0969da;
+  text-decoration: none;
+}
+
+.repo-name:hover {
+  text-decoration: underline;
+}
+
+.repo-description {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #57606a;
+  line-height: 1.4;
+}
+
+.repo-icon {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* 操作按钮 */
+.developer-actions {
+  flex-shrink: 0;
+}
+
+.follow-button {
+  padding: 8px 16px;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #24292f;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.follow-button:hover {
+  background: #f6f8fa;
+  border-color: #0969da;
+}
+
+.follow-button:active {
+  background: #f1f3f4;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .developers-content-card {
+    margin: 0 16px;
+    padding: 0;
+  }
+
+  .developers-filters {
+    padding: 16px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .filter-dropdowns {
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+  }
+
+  .filter-dropdown {
+    justify-content: space-between;
+  }
+
+  .filter-select {
+    min-width: auto;
+    flex: 1;
+  }
+
+  .developers-list {
+    padding: 16px;
+  }
+
+  .developer-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 0;
+  }
+
+  .developer-rank {
+    font-size: 20px;
+    min-width: auto;
+  }
+
+  .developer-info {
+    width: 100%;
+  }
+
+  .popular-repo {
+    width: 100%;
+    padding: 0;
+  }
+
+  .developer-actions {
+    width: 100%;
+  }
+
+  .follow-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .developers-title {
+    font-size: 28px;
+  }
+
+  .developers-description {
+    font-size: 16px;
+  }
+
+  .avatar-circle {
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .name-link {
+    font-size: 16px;
+  }
+
+  .repo-name {
+    font-size: 14px;
+  }
+}

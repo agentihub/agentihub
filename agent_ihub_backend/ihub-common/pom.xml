@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.litevar</groupId>
+        <artifactId>agent-ihub-server</artifactId>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>ihub-common</artifactId>
+    <packaging>pom</packaging>
+
+    <description>
+        common 通用模块
+    </description>
+
+    <modules>
+        <module>ihub-common-bom</module>
+        <module>ihub-common-satoken</module>
+        <module>ihub-common-mongoplus</module>
+        <module>ihub-common-core</module>
+        <module>ihub-common-web</module>
+        <module>ihub-common-milvus</module>
+        <module>ihub-common-translation</module>
+    </modules>
+
+
+</project>

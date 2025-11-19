@@ -1,0 +1,87 @@
+/* ExploreNav 组件样式 */
+.explore-nav {
+  background: #ffffff;
+  border-bottom: 1px solid #d0d7de;
+  position: relative;
+  z-index: 10;
+}
+
+.explore-nav-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* 居中对齐模式 */
+.explore-nav--center .explore-nav-content {
+  justify-content: center;
+}
+
+/* 左对齐模式 */
+.explore-nav--left .explore-nav-content {
+  justify-content: flex-start;
+}
+
+.explore-nav-item {
+  padding: 16px 12px;
+  color: #57606a;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.explore-nav-item:hover {
+  color: #24292f;
+}
+
+.explore-nav-item.active {
+  color: #24292f;
+}
+
+.explore-nav-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #0969da;
+  border-radius: 2px 2px 0 0;
+}
+
+/* 响应式样式 */
+@media (max-width: 768px) {
+  .explore-nav-content {
+    padding: 0 16px;
+    gap: 6px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .explore-nav-content::-webkit-scrollbar {
+    display: none;
+  }
+
+  .explore-nav-item {
+    padding: 12px 8px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .explore-nav-content {
+    gap: 4px;
+  }
+
+  .explore-nav-item {
+    padding: 10px 6px;
+    font-size: 12px;
+  }
+}
