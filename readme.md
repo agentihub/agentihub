@@ -45,7 +45,7 @@ Agent iHub is an AI agent creation and sharing platform aimed at helping users q
 
 ### 1. Minimum Requirements
 
-Before starting to use AgeneIhub, it is recommended that your machine meet the following minimum system requirements:
+Before starting to use Agent iHub, it is recommended that your machine meet the following minimum system requirements:
 
 >- CPU >= 4 Core
 >- RAM >= 10 GiB
