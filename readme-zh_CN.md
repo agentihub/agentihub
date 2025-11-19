@@ -1,8 +1,8 @@
-# AgentIhub
+# Agent iHub
 
 [English](readme.md) · 中文
 
-AgentIhub是一个AI Agent创作、分享平台，旨在帮助用户快速智能地创作、分享和部署和AI Agent应用程序。它支持多种来源agent的导入导出，包括agent配置、大模型配置、知识库、工具等内容，提供了Web端后端服务，适用于各种不同的应用场景。
+Agent iHub是一个AI Agent创作、分享平台，旨在帮助用户快速智能地创作、分享和部署和AI Agent应用程序。它支持多种来源agent的导入导出，包括agent配置、大模型配置、知识库、工具等内容，提供了Web端后端服务，适用于各种不同的应用场景。
 
 ## 程序说明
 

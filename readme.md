@@ -1,8 +1,8 @@
-# AgentIhub
+# Agent iHub
 
 English · [中文](readme-zh_CN.md)
 
-AgeneIhub is an AI agent creation and sharing platform aimed at helping users quickly and intelligently create, share, and deploy AI agent applications. It supports the import and export of agents from multiple sources, including agent configuration, large model configuration, knowledge base, tools, etc. It provides web-based backend services and is suitable for various application scenarios.
+Agent iHub is an AI agent creation and sharing platform aimed at helping users quickly and intelligently create, share, and deploy AI agent applications. It supports the import and export of agents from multiple sources, including agent configuration, large model configuration, knowledge base, tools, etc. It provides web-based backend services and is suitable for various application scenarios.
 
 ## Program description
 - [Web](agent_ihub_web/README.md)
@@ -54,7 +54,7 @@ Before starting to use AgeneIhub, it is recommended that your machine meet the f
 ### 2. Environment Preparation
 - Database：mongodb(4.4+), redis(6.0+)
 - Vector database：milvus(2.5+)
-- development environment
+- Development environment
   - web: nodejs(18.0+)
   - backend: java(17.0+)
 
