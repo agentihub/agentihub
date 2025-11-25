@@ -5,8 +5,8 @@ English · [中文](readme-zh_CN.md)
 Agent iHub is an AI agent creation and sharing platform aimed at helping users quickly and intelligently create, share, and deploy AI agent applications. It supports the import and export of agents from multiple sources, including agent configuration, large model configuration, knowledge base, tools, etc. It provides web-based backend services and is suitable for various application scenarios.
 
 ## Program description
-- [Web](agent_ihub_web/README.md)
-- [Backend](agent_ihub_backend/README.md)
+- [Web](agent_ihub_web/README.md): Used for managing, searching, creating, and sharing AI agents, fan interaction, etc.
+- [Backend](agent_ihub_backend/README.md) : service and api for web.
 
 ## Features
 

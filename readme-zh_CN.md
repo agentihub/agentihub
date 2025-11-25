@@ -6,8 +6,8 @@ Agent iHub是一个AI Agent创作、分享平台，旨在帮助用户快速智�
 
 ## 程序说明
 
-- [Web端](agent_ihub_web/README_CN.md)
-- [后端](agent_ihub_backend/README_zh.md)
+- [Web端](agent_ihub_web/README_CN.md)：用于管理、搜索、创建和分享AI Agent，粉丝互动等.
+- [后端](agent_ihub_backend/README_zh.md)：web的后端服务.
 
 ## 特性
 
@@ -60,5 +60,5 @@ Agent iHub是一个AI Agent创作、分享平台，旨在帮助用户快速智�
   - backend: java(17.0+)
 
 ### 3. 构建和运行
-- web端：请参考 [Web端](agent_ihub_web/README_CN.md)
+- web端：请参考 [Web端](agent_ihub_web/README_CN.md) 
 - 后端：请参考 [后端](agent_ihub_backend/README_zh.md)
